@@ -52,11 +52,6 @@ button:hover {
 
 /* form-input.css */
 
-.group {
-  position: relative;
-  margin: 25px 0;
-}
-
 .form-input-label {
   position: absolute;
   left: 5px;

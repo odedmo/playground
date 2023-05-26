@@ -4,6 +4,7 @@ import { getData } from "./utils/data-utils";
 import FormInput from "./components/form-input/FormInput";
 
 import "./App.css";
+import Button from "@mui/material/Button";
 
 // TypeScript declarations
 type User = {
@@ -80,11 +81,13 @@ const App = () => {
             onChange={handleChange}
           />
           <div className="button-group">
-            <button type="submit">Sign In</button>
+            <Button variant="contained" type="submit">
+              Sign In
+            </Button>
             <span>
-              <button type="button" onClick={reload}>
+              <Button variant="contained" onClick={reload}>
                 Clear
-              </button>
+              </Button>
             </span>
           </div>
         </form>
