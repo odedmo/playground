@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "node index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q index.js\"",
+    "build": "rimraf ./build && npx tsc",
+    "start": "node build/index.js",
+    "dev": "concurrently \"npm run build --watch\" \"nodemon -q index.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -25,6 +25,7 @@
     "@types/node": "^20.2.3",
     "concurrently": "^8.0.1",
     "nodemon": "^2.0.22",
+    "rimraf": "^5.0.1",
     "typescript": "^5.0.4"
   }
 }
